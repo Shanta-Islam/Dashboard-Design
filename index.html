@@ -4,9 +4,416 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
     <title>Dashboard Design</title>
 </head>
-<body>
-    
-</body>
+  <body>
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg navbar-white fixed-top">
+      <div class="container-fluid">
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="offcanvasExample">
+          <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="images/logo.png" alt="" class="top-logo"></a>
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <form class="d-flex has-search">
+            <span class="fa fa-search form-control-feedback"></span>
+            <input class="form-control" type="search" placeholder="SEARCH" aria-label="Search">
+          </form>
+          <div class="icon-wrapper">
+            <img src="images/calender.png" alt="">
+            <img src="images/notification.png" alt="">
+            <img src="images/avatar-img.png" alt="" class="avatar-image">
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end -->
+    <!-- sidebar start -->
+    <div class="offcanvas offcanvas-start sidebar" tabindex="-1" id="sidebar">
+      <div class="offcanvas-header">
+        <img src="images/logo.png" alt="" class="logo">
+      </div>
+      <div class="offcanvas-body p-0">
+        <nav class="navbar-dark">
+          <ul class="navbar-nav">
+            <li>
+              <a href="#" class="nav-link px-5 active">
+                <img src="images/icon.png" alt="" class="icon">
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="attendance.html" class="nav-link px-5">
+                <img src="images/icon.png" alt="" class="icon">
+                <span>Attendance</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-5">
+                <img src="images/icon.png" alt="" class="icon">
+                <span>Employees</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-5">
+                <img src="images/icon.png" alt="" class="icon">
+                <span>Leaves</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-5">
+                <img src="images/icon.png" alt="" class="icon">
+                <span>Expense</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-5">
+                <img src="images/icon.png" alt="" class="icon">
+                <span>Notice</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-5">
+                <img src="images/icon.png" alt="" class="icon">
+                <span>Departments </span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link px-4 sidebar-link" data-bs-toggle="collapse" href="#settings">
+                <span class="ms-auto">
+                  <span class="right-icon">
+                    <i class="fa fa-angle-down"></i>
+                  </span>
+                </span>
+                <img src="images/setting.png" alt="" class="icon">
+                <span>Settings</span>
+                
+              </a>
+              <div class="collapse" id="settings">
+                <ul class="list-style">
+                  <li>
+                    <a href="#" class="nav-link">
+                      <span>Approval</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <span>Leave</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <span>Office Setting</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <span>My Subscriptions</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-5">
+                <img src="images/logout.png" alt="" class="icon">
+                <span>Logout </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- sidebar end -->
+
+    <main class="mt-5 mb-5 pt-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Dashboard</h2>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <h3>Company Status</h3>
+          <div class="col-xl-3 col-md-4 col-sm-6 mt-4">
+            <div class="card" style="width: 15rem;">
+              <div class="card-header">
+                <div class="d-flex flex-row align-items-center">
+                  <div class="icon"> <img src="images/card-icon.png" alt=""> </div>
+                  <div class="ms-2">
+                    <h5 class="mb-0">Total Employee</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="row mb-5">
+                  <div class="col-md-5">
+                    <h4>450</h4>
+                  </div>
+                  <div class="col-md-7">
+                    <a href="#" class="btn btn-primary view-btn">View All</a>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="avatar-group">
+                      <div class="avatar">
+                        <img src="images/avatar/img1.png" alt="">
+                      </div>
+                      <div class="avatar">
+                        <img src="images/avatar/img2.png" alt="">
+                      </div>
+                      <div class="avatar">
+                        <img src="images/avatar/img3.png" alt="">
+                      </div>
+                      <div class="avatar">
+                        <img src="images/avatar/img4.png" alt="">
+                      </div>
+                      <div class="avatar">
+                        <img src="images/avatar/img5.png" alt="">
+                      </div>
+                      <div class="hidden-avatar avatar">
+                        <img src="images/avatar/img.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-4 col-sm-6 mt-4">
+            <div class="card" style="width: 15rem;">
+              <div class="card-header">
+                <div class="d-flex flex-row align-items-center">
+                  <div class="icon"> <img src="images/card-icon.png" alt=""> </div>
+                  <div class="ms-2">
+                    <h5 class="mb-0">Attend Today</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="row mb-5">
+                  <div class="col-md-5">
+                    <h4>420</h4>
+                  </div>
+                  <div class="col-md-7">
+                    <a href="#" class="btn btn-primary view-btn">View All</a>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="avatar-group">
+                      <div class="avatar">
+                        <img src="images/avatar/img1.png" alt="">
+                      </div>
+                      <div class="avatar">
+                        <img src="images/avatar/img2.png" alt="">
+                      </div>
+                      <div class="avatar">
+                        <img src="images/avatar/img3.png" alt="">
+                      </div>
+                      <div class="avatar">
+                        <img src="images/avatar/img4.png" alt="">
+                      </div>
+                      <div class="avatar">
+                        <img src="images/avatar/img5.png" alt="">
+                      </div>
+                      <div class="hidden-avatar avatar">
+                        <img src="images/avatar/img.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-4 col-sm-6 mt-4">
+            <div class="card" style="width: 15rem;">
+              <div class="card-header">
+                <div class="d-flex flex-row align-items-center">
+                  <div class="icon"> <img src="images/card-icon.png" alt=""> </div>
+                  <div class="ms-2">
+                    <h5 class="mb-0">Employees on Leave</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="row mb-5">
+                  <div class="col-md-5">
+                    <h4>15</h4>
+                  </div>
+                  <div class="col-md-7">
+                    <a href="#" class="btn btn-primary view-btn">View All</a>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="avatar-group">
+                      <div class="avatar">
+                        <img src="images/avatar/img1.png" alt="">
+                      </div>
+                      <div class="avatar">
+                        <img src="images/avatar/img2.png" alt="">
+                      </div>
+                      <div class="avatar">
+                        <img src="images/avatar/img3.png" alt="">
+                      </div>
+                      <div class="avatar">
+                        <img src="images/avatar/img4.png" alt="">
+                      </div>
+                      <div class="avatar">
+                        <img src="images/avatar/img5.png" alt="">
+                      </div>
+                      <div class="hidden-avatar avatar">
+                        <img src="images/avatar/img.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-4 col-sm-6 mt-4">
+            <div class="card" style="width: 15rem;">
+              <div class="card-header">
+                <div class="d-flex flex-row align-items-center">
+                  <div class="icon"> <img src="images/card-icon.png" alt=""> </div>
+                  <div class="ms-2">
+                    <h5 class="mb-0">New Expense Request</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="row mb-5">
+                  <div class="col-md-5">
+                    <h4>5</h4>
+                  </div>
+                  <div class="col-md-7">
+                    <a href="#" class="btn btn-primary view-btn">View All</a>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="avatar-group">
+                      <div class="avatar">
+                        <img src="images/avatar/img1.png" alt="">
+                      </div>
+                      <div class="avatar">
+                        <img src="images/avatar/img2.png" alt="">
+                      </div>
+                      <div class="avatar">
+                        <img src="images/avatar/img3.png" alt="">
+                      </div>
+                      <div class="avatar">
+                        <img src="images/avatar/img4.png" alt="">
+                      </div>
+                      <div class="avatar">
+                        <img src="images/avatar/img5.png" alt="">
+                      </div>
+                      <div class="hidden-avatar avatar">
+                        <img src="images/avatar/img.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-6">
+            <h3>Expense Report</h3>
+            <div class="card mt-4">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-xl-8">
+                    <ul class="nav nav-tabs card-header-tabs" data-bs-tabs="tabs">
+                      <li class="nav-item">
+                          <a class="nav-link active" aria-current="true" data-bs-toggle="tab" href="#day">Day</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" data-bs-toggle="tab" href="#week">Week</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#month">Month</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-bs-toggle="tab" href="#year">Year</a>
+                  </li>
+                  </ul>
+                  </div>
+                  <div class="col-xl-4">
+                    <button class="btn btn-primary export-btn">Export Details</button>
+                  </div>
+                </div>
+              </div>
+              <form class="card-body tab-content">
+                  <div class="tab-pane active" id="day">
+                    <h5>৳45,000</h5>
+                    <div>
+                      <canvas id="myChart"></canvas>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="week">
+                    <h5>৳45,00000</h5>
+                  </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h3>Task Summary</h3>
+            <div class="card task-card mt-4">
+              <div class="card-body">
+                <h5>Total task</h5>
+                <p>112</p>
+                <div class="progress-wrapper">
+                  <h5>Completed</h5>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+                      <span class="sr-only">50% Complete</span>
+                    </div>
+                    <span class="progress-completed">50/80</span>
+                  </div>
+                </div>
+                <div class="progress-wrapper">
+                  <h5>In Progress</h5>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%;">
+                      <span class="sr-only">15% Complete</span>
+                    </div>
+                    <span class="progress-completed">15/100</span>
+                  </div>
+                </div>
+                <div class="progress-wrapper">
+                  <h5>Pending</h5>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                      <span class="sr-only">30% Complete</span>
+                    </div>
+                    <span class="progress-completed">30/80</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+  </body>
 </html>

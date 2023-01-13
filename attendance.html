@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Dashboard Design</title>
+</head>
+  <body>
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg navbar-white fixed-top">
+      <div class="container-fluid">
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="offcanvasExample">
+          <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="images/logo.png" alt="" class="top-logo"></a>
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <form class="d-flex has-search">
+            <span class="fa fa-search form-control-feedback"></span>
+            <input class="form-control" type="search" placeholder="SEARCH" aria-label="Search">
+          </form>
+          <div class="icon-wrapper">
+            <img src="images/calender.png" alt="">
+            <img src="images/notification.png" alt="">
+            <img src="images/avatar-img.png" alt="" class="avatar-image">
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end -->
+    <!-- sidebar start -->
+    <div class="offcanvas offcanvas-start sidebar" tabindex="-1" id="sidebar">
+      <div class="offcanvas-header">
+        <img src="images/logo.png" alt="" class="logo">
+      </div>
+      <div class="offcanvas-body p-0">
+        <nav class="navbar-dark">
+          <ul class="navbar-nav">
+            <li>
+              <a href="index.html" class="nav-link px-5">
+                <img src="images/icon.png" alt="" class="icon">
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="attendance.html" class="nav-link active px-5">
+                <img src="images/icon.png" alt="" class="icon">
+                <span>Attendance</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-5">
+                <img src="images/icon.png" alt="" class="icon">
+                <span>Employees</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-5">
+                <img src="images/icon.png" alt="" class="icon">
+                <span>Leaves</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-5">
+                <img src="images/icon.png" alt="" class="icon">
+                <span>Expense</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-5">
+                <img src="images/icon.png" alt="" class="icon">
+                <span>Notice</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-5">
+                <img src="images/icon.png" alt="" class="icon">
+                <span>Departments </span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link px-4 sidebar-link" data-bs-toggle="collapse" href="#settings">
+                <span class="ms-auto">
+                  <span class="right-icon">
+                    <i class="fa fa-angle-down"></i>
+                  </span>
+                </span>
+                <img src="images/setting.png" alt="" class="icon">
+                <span>Settings</span>
+                
+              </a>
+              <div class="collapse" id="settings">
+                <ul class="list-style">
+                  <li>
+                    <a href="#" class="nav-link">
+                      <span>Approval</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <span>Leave</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <span>Office Setting</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <span>My Subscriptions</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-5">
+                <img src="images/logout.png" alt="" class="icon">
+                <span>Logout </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- sidebar end -->
+
+    <main class="mt-5 mb-5 pt-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2>Attendance</h2>
+          </div>
+          <div class="col-lg-6 d-flex justify-content-lg-end align-items-center">
+            <button class="btn btn-primary download-btn me-4">Download Report</button>
+            <img src="images/settings.png" alt="" width="30" height="30">
+          </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-lg-3 col-md-6">
+                <div class="input-group mb-3">
+                    <input type="date" class="form-control input" placeholder="Department">
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control input" placeholder="Department">
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6"> 
+                <div class="input-group mb-3">
+                    <select class="form-select input" id="inputGroupSelect01">
+                      <option selected>Attendance</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6"> 
+                <div class="input-group mb-3">
+                    <select class="form-select input" id="inputGroupSelect02">
+                      <option selected>Present</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control input" placeholder="Check In">
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control input" placeholder="Location">
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6"> 
+                <div class="input-group mb-3">
+                    <select class="form-select input" id="inputGroupSelect03">
+                      <option selected>Designation</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6"> 
+                <div class="input-group mb-3">
+                    <select class="form-select input" id="inputGroupSelect04">
+                      <option selected>Department</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                </div>
+            </div>
+            
+        </div>
+        <div class="row mt-5">
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First</th>
+                                <th scope="col">Last</th>
+                                <th scope="col">Handle</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                      
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        
+      </div>
+    </main>
+    <script type="text/javascript">
+        $(function() {
+            $('#datepicker').datepicker();
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
