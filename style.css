@@ -229,6 +229,9 @@ h3{
     visibility: visible !important;
     height: 100%;
   }
+  .top-card-wrapper .card{
+    width: 15rem;
+  }
 }
 @media (max-width: 991px){
   .top-logo{
